@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blackground">
+        <div class="container3d reset-container obscure-scene" id="container3d">
+            
+            <div class="scene" id="scene3d">
+                <!-- <div class="floor"></div> -->
+                <div class="cube" id="container3dCube">
+                    <div class="front">
+                        <img src="logo-footer.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="logo-footer.png" alt="">
+                    </div>
+                    <div class="left">
+                        <img src="logo-footer.png" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="logo-footer.png" alt="">
+                    </div>
+                    <div class="top">
+                        <img src="logo-footer.png" alt="">
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+                <!-- <div class="ball"></div> -->
+            
+            </div>
+        </div>
+        <p class="message">Pasa el mouse sobre el cubo de VREALITY</p>
+    </div>
+    
+</body>
+<script>
+    container3dCube.addEventListener('mouseover', ()=>{
+        container3d.classList.remove("reset-container");
+        scene3d.classList.add("rotate-scene");
+        container3d.classList.remove("obscure-scene");
+    })
+    container3dCube.addEventListener('mouseout', ()=>{
+        container3d.classList.add("reset-container");
+        container3d.classList.add("obscure-scene");
+        scene3d.classList.remove("rotate-scene");
+    })
+</script>
+</html>
